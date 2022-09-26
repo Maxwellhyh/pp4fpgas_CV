@@ -34,10 +34,10 @@ Since all edge detection results are easily affected by the noise in the image, 
 
 Here is an example of a 5×5 Gaussian filter, used to create the adjacent image, with ![](https://render.githubusercontent.com/render/math?math=\sigma) = 1. (The asterisk denotes a convolution operation.)
 
-    <div align="center">
+<div align="center">
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20I_y=\begin{bmatrix}-1%26-2%26-1\\0%260%260\\%2B1%26%2B2%26%2B1\end{bmatrix}">
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20I=\begin{bmatrix}2%264%265%264%262\\4%269%2612%269%264\\5%2612%2615%2612%265\\4%269%2612%269%264\\2%264%265%264%262\end{bmatrix}">
-    </div>
+</div>
 
 It is important to understand that the selection of the size of the Gaussian kernel will affect the performance of the detector. The larger the size is, the lower the detector's sensitivity to noise. Additionally, the localization error to detect the edge will slightly increase with the increase of the Gaussian filter kernel size. A 5×5 is a good size for most cases, but this will also vary depending on specific situations.
 
@@ -45,13 +45,13 @@ It is important to understand that the selection of the size of the Gaussian ker
 
 An edge in an image may point in a variety of directions, so the Canny algorithm uses four filters to detect horizontal, vertical and diagonal edges in the blurred image. The edge detection operator (such as Roberts, Prewitt, or Sobel) returns a value for the first derivative in the horizontal direction (Gx) and the vertical direction (Gy). From this the edge gradient and direction can be determined:
 
-    <div align="center">
+<div align="center">
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20G=\sqrt{G_x^2%2BG_y^2}">
-    </div>
+</div>
     
-    <div align="center">
+<div align="center">
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20a=arctan{\frac{G_y}{G_x}}">
-    </div>
+</div>
 
 where G can be computed using the hypot function and atan2 is the arctangent function with two arguments. The edge direction angle is rounded to one of four angles representing vertical, horizontal, and the two diagonals (0°, 45°, 90°, and 135°). An edge direction falling in each color region will be set to a specific angle value, for instance, θ in [0°, 22.5°] or [157.5°, 180°] maps to 0°.
 
