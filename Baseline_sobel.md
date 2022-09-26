@@ -33,7 +33,7 @@ Since all edge detection results are easily affected by the noise in the image, 
 Here is an example of a 5×5 Gaussian filter, used to create the adjacent image, with ![](https://render.githubusercontent.com/render/math?math=\sigma) = 1. (The asterisk denotes a convolution operation.)
 
 <div align="center">
-    <img src="https://render.githubusercontent.com/render/math?math=\huge%20I_y=\begin{bmatrix}-1%26-2%26-1\\0%260%260\\%2B1%26%2B2%26%2B2\end{bmatrix}">
+    <img src="https://render.githubusercontent.com/render/math?math=\huge%20I_y=\begin{bmatrix}-1%26-2%26-1\\0%260%260\\%2B1%26%2B2%26%2B1\end{bmatrix}">
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20I=\begin{bmatrix}2%264%265%264%262\\4%269%2612%269%264\\5%2612%2615%2612%265\\4%269%2612%269%264\\2%264%265%264%262\end{bmatrix}">
     </div>
 
