@@ -22,7 +22,7 @@
         </tr>
         <tr>
             <td height="24" >
-                <a href= "![Baseline_sobel](./Baseline_Sobel.md)" >Introduction to the Sobel edge detector</a>
+                <a href= "![Baseline_sobel](./Baseline_sobel.md)" >Introduction to the Sobel edge detector</a>
             </td>
         </tr>
         <tr>
