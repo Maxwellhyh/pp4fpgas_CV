@@ -23,7 +23,7 @@ Using this information, we can also calculate the gradient's direction:
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20a=arctan{\frac{G_y}{G_x}}">
 </div>
 
-where, for example, {\displaystyle \mathbf {\Theta } }{\displaystyle \mathbf {\Theta } } is 0 for a vertical edge which is lighter on the right side.
+where, for example, a is 0 for a vertical edge which is lighter on the right side.
 
 # Templete
 
