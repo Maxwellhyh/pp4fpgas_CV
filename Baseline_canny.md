@@ -32,7 +32,7 @@ The process of Canny edge detection algorithm can be broken down to five differe
 
 Since all edge detection results are easily affected by the noise in the image, it is essential to filter out the noise to prevent false detection caused by it. To smooth the image, a Gaussian filter kernel is convolved with the image. This step will slightly smooth the image to reduce the effects of obvious noise on the edge detector.
 
-Here is an example of a 5×5 Gaussian filter, used to create the adjacent image, with ![](https://render.githubusercontent.com/render/math?math=\sigma) = 1. (The asterisk denotes a convolution operation.)
+Here is an example of a 5×5 Gaussian filter, used to create the adjacent image, with ![](https://render.githubusercontent.com/render/math?math=\sigma) = 1.
 
 <div align="center">
     <img src="https://render.githubusercontent.com/render/math?math=\huge%20I_y=\begin{bmatrix}-1%26-2%26-1\\0%260%260\\%2B1%26%2B2%26%2B1\end{bmatrix}">
