@@ -17,17 +17,17 @@
         </tr>
         <tr>
             <td height="24" >
-                <a href= "![Baseline_filter2D](./Baseline_filter2D.md)" >Introduction to the filter2D function</a>
+                <a href="https://github.com/Maxwellhyh/pp4fpgas_CV/edit/main/Baseline_filter2D.md">Introduction to the filter2D function</a>
             </td>
         </tr>
         <tr>
             <td height="24" >
-                <a href= "![Baseline_sobel](./Baseline_sobel.md)" >Introduction to the Sobel edge detector</a>
+                <a href="https://github.com/Maxwellhyh/pp4fpgas_CV/edit/main/Baseline_sobel.md">Introduction to the Sobel edge detector</a>
             </td>
         </tr>
         <tr>
             <td height="24" >
-                <a href= "![Baseline_canny](./Baseline_canny.md)" >Introduction to the Canny edge detector</a>
+                <a href="https://github.com/Maxwellhyh/pp4fpgas_CV/edit/main/Baseline_canny.md">Introduction to the Canny edge detector</a>
             </td>
         </tr>
     </tbody>
