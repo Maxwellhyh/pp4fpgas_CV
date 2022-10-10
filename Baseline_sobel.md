@@ -27,4 +27,19 @@ where, for example, a is 0 for a vertical edge which is lighter on the right sid
 
 # Templete
 
+C++ provides an object-oriented programming language methodology, namespace feature, operator overloading. The motivation behind object-oriented programming is to treat the system in the form of classes and objects. Class is a user-defined prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type. Objects are the basic units, which represent system entities. Objects interact with each other by invoking methods. C++ also provides additional features, e.g., polymorphism (HLS does not support), inheritance, encapsulation, abstraction. With C++ Class/Method/Template, it is a good methodology to develop IP or library.
+
 # Boundary condition
+
+In most cases, the processing window contains a region of the input image. However, near the boundary of the input image, the filter may extend beyond the boundary of the input image. Depending on the requirements of different applications, there are many different ways of accounting for the behavior of the filter near the boundary. Perhaps the simplest way to account for the boundary condition is to compute a smaller output image that avoids requiring the values of input pixels outside of the input image. However, in applications where the output image size is fixed, such as Digital Television, this approach is generally unacceptable. In addition, if a sequence of filters is required, dealing with a large number images with slightly different sizes can be somewhat cumbersome. The code in Figure 9.10 creates an output with the same size as the input by padding the smaller output image with a known value (in this case, the color black). Alternatively, the missing values can be synthesized, typically in one of several ways.
+
+• Missing input values can be filled with a constant
+
+• Missing input values can be filled from the boundary pixel of the input image.
+
+• Missing input values can be reconstructed by reflecting pixels from the interior of the input image.
+
+Of course, more complicated and typically more computationally intensive schemes are also used. One way of writing code to handle boundary conditions is shown in Figure 9.16. This code computes an offset address into the window buffer for each pixel in the window buffer. However, there is a significant disadvantage in this code since each read from the window buffer is at a variable address. This variable read results in multiplexers before the filter is computed. For an N-by-N tap filter, there will be approximately N*N multiplexers with N inputs each. For simple filters, the cost of these multiplexers (and the logic required to compute the correct indexes) can dominate the cost of computing the filter.
+
+An alternative technique is to handle the boundary condition when data is written into the window buffer and to shift the window buffer in a regular pattern. In this case, there are only N multiplexers, instead of N*N, resulting in significantly lower resource usage.
+
